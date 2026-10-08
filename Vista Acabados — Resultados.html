@@ -1,0 +1,366 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vista Acabados — Resultados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#02121E;
+    --navy-2:#0B2233;
+    --orange:#F26C2F;
+    --orange-ink:#C9501A;
+    --char:#2D292B;
+    --bg:#FFFFFF;
+    --bg-soft:#F4F5F6;
+    --ink:#02121E;
+    --muted:#6B7177;
+    --line:#E3E5E7;
+    --on-dark:#FFFFFF;
+    --on-dark-muted:rgba(255,255,255,.62);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#06192A; --bg-soft:#0B2233; --ink:#F2F4F5; --muted:#9AA6B0; --line:rgba(255,255,255,.12);
+      --orange-ink:#FF8A55; --navy-2:#0F2A3F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#06192A; --bg-soft:#0B2233; --ink:#F2F4F5; --muted:#9AA6B0; --line:rgba(255,255,255,.12);
+    --orange-ink:#FF8A55; --navy-2:#0F2A3F;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Montserrat',-apple-system,'Segoe UI',sans-serif;font-size:15px;line-height:1.55}
+  .in{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ---------- NAV ---------- */
+  .nav{background:var(--navy);color:var(--on-dark);position:sticky;top:0;z-index:50;transition:box-shadow .2s}
+  .nav.stuck{box-shadow:0 6px 18px rgba(0,0,0,.28);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav .in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .logo{line-height:1;color:#fff;text-decoration:none}
+  .logo b{display:block;font-weight:500;font-size:30px;letter-spacing:-.02em}
+  .logo span{display:block;font-size:8.5px;letter-spacing:.55em;font-weight:500;margin-top:2px;padding-left:2px;color:var(--on-dark-muted)}
+  .nav-meta{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:flex;gap:18px;align-items:center}
+  .nav-meta i{width:1px;height:12px;background:rgba(255,255,255,.5);display:inline-block}
+
+  /* ---------- HERO ---------- */
+  .hero{background:var(--navy);color:var(--on-dark);padding:56px 0 64px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;border:56px solid var(--orange);border-radius:50%;opacity:.12}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin:0 0 14px}
+  .hero h1{font-weight:800;font-size:clamp(34px,6.4vw,64px);line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;margin:0 0 6px;max-width:780px}
+  .hero h1 span{color:var(--orange)}
+  .pills{display:flex;gap:8px;position:relative;z-index:1}
+  .pills button{appearance:none;cursor:pointer;font:700 11.5px/1 'Montserrat',sans-serif;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;
+    color:#fff;background:transparent;border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 16px;transition:.15s}
+  .pills button:hover{border-color:var(--orange)}
+  .pills button[aria-pressed="true"]{background:var(--orange);border-color:var(--orange)}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:1px solid rgba(255,255,255,.18);position:relative;z-index:1}
+  .hs{padding:26px 24px 0 0}
+  .hs + .hs{padding-left:24px;border-left:1px solid rgba(255,255,255,.18)}
+  .hs .v{font-weight:800;font-size:clamp(30px,4.6vw,48px);line-height:1;letter-spacing:-.02em}
+  .hs .v small{font-size:.45em;font-weight:600;letter-spacing:0;margin-left:4px;color:var(--on-dark-muted)}
+  .hs .l{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-muted);margin-top:10px}
+  .hs.acc .v{color:var(--orange)}
+  .hero-note{position:relative;z-index:1;margin:26px 0 0;font-size:13px;color:var(--on-dark-muted)}
+  .hero-note b{color:#fff;font-weight:700}
+
+  /* ---------- BANDS ---------- */
+  .band{background:var(--orange);color:#fff;text-align:center;padding:18px 16px}
+  .band h2{margin:0;font-weight:700;font-size:clamp(20px,3vw,28px);letter-spacing:.06em;text-transform:uppercase}
+  .band p{margin:4px 0 0;font-size:12.5px;font-weight:500;opacity:.9}
+  .sec{padding:52px 0}
+  .sec.soft{background:var(--bg-soft)}
+  .eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange-ink);margin:0 0 6px}
+  .title{font-size:20px;font-weight:700;margin:0 0 22px;letter-spacing:-.005em}
+
+  /* ---------- LEADS: recibidos vs válidos ---------- */
+  .rv{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;max-width:860px;margin:0 auto;text-align:center}
+  .rv .big{font-weight:800;font-size:clamp(72px,13vw,132px);line-height:.85;letter-spacing:-.05em}
+  .rv .big.o{color:var(--orange)}
+  .rv .lab{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-top:16px}
+  .rv .arrow{font-size:40px;font-weight:300;color:var(--muted)}
+  .dup{max-width:860px;margin:30px auto 0;display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;
+    background:var(--bg-soft);padding:14px 20px;font-size:14px}
+  .dup b{font-weight:800;font-size:20px;color:var(--orange-ink)}
+  .note{font-size:12.5px;color:var(--muted);margin:14px auto 0;line-height:1.6;max-width:860px;text-align:center}
+
+  /* ---------- LEADS: fuentes ---------- */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+  .panel{background:var(--bg-soft);border-top:4px solid var(--navy-2);padding:24px 24px 26px}
+  .panel.o{border-top-color:var(--orange)}
+  .title{font-size:20px;font-weight:700;margin:0 0 22px;letter-spacing:-.005em}
+  .stack{display:flex;height:16px;border-radius:999px;overflow:hidden;margin:4px 0 20px;background:var(--line)}
+  .stack div{transition:flex-grow .35s}
+  .legend{display:flex;flex-direction:column;gap:12px}
+  .lg{display:grid;grid-template-columns:12px 1fr auto auto;gap:12px;align-items:baseline}
+  .lg i{width:12px;height:12px;border-radius:50%;display:block;align-self:center}
+  .lg .n{font-size:14px;font-weight:500}
+  .lg .v{font-weight:800;font-size:20px}
+  .lg .p{font-size:12px;color:var(--muted);font-weight:600;min-width:38px;text-align:right}
+
+  /* ---------- PAUTA: resumen ---------- */
+  .inv-total{text-align:center}
+  .inv-total .amt{font-weight:800;font-size:clamp(40px,6.5vw,68px);line-height:.9;letter-spacing:-.04em}
+  .inv-total .amt small{font-size:.38em;font-weight:700;letter-spacing:0;color:var(--muted);margin-left:6px}
+  .inv-total .lab{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-top:14px}
+  .inv-bar{display:flex;height:14px;border-radius:999px;overflow:hidden;max-width:720px;margin:28px auto 0}
+  .inv-bar div{transition:flex-grow .35s}
+  .split{display:grid;grid-template-columns:1fr 1fr}
+  .sp{padding:40px 32px;color:#fff;text-align:center}
+  .sp.n{background:var(--navy)} .sp.o{background:var(--orange)}
+  .ico{width:56px;height:56px;border-radius:50%;background:#fff;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .sp h3{margin:0 0 18px;font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase}
+  .sp .amt{font-weight:800;font-size:clamp(28px,4vw,40px);line-height:1;letter-spacing:-.02em}
+  .sp .shr{margin-top:12px;font-size:13px;font-weight:600;letter-spacing:.04em;opacity:.9}
+
+  /* ---------- PAUTA: plataforma ---------- */
+  .ph{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+  .ph .ico{margin:0;width:48px;height:48px;border:1px solid var(--line)}
+  .ph h3{margin:0;font-size:24px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+  .ph p{margin:2px 0 0;font-size:13px;color:var(--muted)}
+  .hl{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:34px}
+  .hl > div{padding:28px 28px 26px;color:#fff}
+  .hl.n > div:first-child{background:var(--navy)} .hl.n > div:last-child{background:var(--navy-2)}
+  .hl.o > div:first-child{background:var(--orange)} .hl.o > div:last-child{background:var(--orange-ink)}
+  .hl .v{font-weight:800;font-size:clamp(32px,4.6vw,48px);line-height:.9;letter-spacing:-.03em}
+  .hl .l{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-top:12px;opacity:.9}
+  .groups{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .grp h4{margin:0 0 6px;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange-ink);
+    padding-bottom:10px;border-bottom:2px solid var(--ink)}
+  .grp .r{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .grp .r b{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+  footer{background:var(--navy);color:var(--on-dark-muted);font-size:12px;padding:26px 0}
+  footer .in{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer b{color:#fff;font-weight:600}
+
+  [hidden]{display:none!important}
+
+  @media (max-width:820px){
+    .two,.split,.groups{grid-template-columns:1fr}
+    .sp{padding:34px 22px}
+  }
+  @media (max-width:560px){
+    .in{padding:0 16px}
+    .nav .in{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;row-gap:10px}
+    .pills{width:100%;overflow-x:auto;scrollbar-width:none}
+    .pills::-webkit-scrollbar{display:none}
+    .pills button{padding:8px 13px;font-size:11px}
+    .hero-stats{grid-template-columns:1fr}
+    .hs,.hs + .hs{padding:20px 0 0;border-left:none}
+    .hs + .hs{border-top:1px solid rgba(255,255,255,.12);margin-top:20px}
+    .rv{grid-template-columns:1fr;gap:10px}
+    .rv .arrow{transform:rotate(90deg)}
+    .hl{grid-template-columns:1fr}
+    .hl > div{padding:22px}
+  }
+  @media print{
+    .pills{display:none}
+    .sec,.split,.band{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="in">
+    <div class="logo"><b>vista</b><span>ACABADOS</span></div>
+    <div class="pills" role="group" aria-label="Seleccionar periodo">
+      <button type="button" data-p="tot" aria-pressed="true">Todos</button>
+      <button type="button" data-p="jul" aria-pressed="false">Julio</button>
+      <button type="button" data-p="ago" aria-pressed="false">Agosto</button>
+      <button type="button" data-p="sep" aria-pressed="false">Setiembre</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="in">
+    <p class="kicker">Pauta digital · Meta + Google Ads</p>
+    <h1>Resultados de <span>pauta</span> y leads</h1>
+    <div class="hero-stats">
+      <div class="hs"><div class="v" id="h-raw"></div><div class="l">Total leads recibidos</div></div>
+      <div class="hs acc"><div class="v" id="h-leads"></div><div class="l">Total leads válidos</div></div>
+      <div class="hs"><div class="v" id="h-inv"></div><div class="l">Inversión total</div></div>
+    </div>
+    <p class="hero-note"><b id="h-dup"></b> registros duplicados eliminados (mismo correo o teléfono que un lead anterior).</p>
+  </div>
+</header>
+
+<!-- ================= LEADS ================= -->
+<div class="band"><h2>Leads del sitio web</h2><p id="b-per"></p></div>
+
+<section class="sec">
+  <div class="in">
+    <div class="two">
+      <div class="panel o">
+        <p class="eyebrow">¿De dónde vienen?</p>
+        <h3 class="title">Leads por fuente</h3>
+        <div class="stack" id="st-fuente"></div>
+        <div class="legend" id="lg-fuente"></div>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">Solo leads de Meta</p>
+        <h3 class="title">Leads por plataforma</h3>
+        <div class="stack" id="st-plat"></div>
+        <div class="legend" id="lg-plat"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAUTA ================= -->
+<div class="band"><h2>Resultados de pauta</h2><p>Resumen de inversión</p></div>
+
+<section class="sec">
+  <div class="in inv-total">
+    <div class="amt" id="p-inv"></div>
+    <div class="lab">Inversión total</div>
+    <div class="inv-bar"><div id="bar-m" style="background:var(--navy)"></div><div id="bar-g" style="background:var(--orange)"></div></div>
+  </div>
+</section>
+
+<div class="split">
+  <div class="sp n">
+    <div class="ico"><svg width="30" height="18" viewBox="0 0 36 20" aria-hidden="true"><path d="M4 12c0-5 2.7-8 6-8 4 0 6 5 8 8s4 8 8 8c3.3 0 6-3 6-8s-2.7-8-6-8c-4 0-6 5-8 8s-4 8-8 8c-3.3 0-6-3-6-8z" fill="none" stroke="#0081FB" stroke-width="2.8" stroke-linecap="round"/></svg></div>
+    <h3>Meta</h3>
+    <div class="amt" id="s-meta"></div>
+    <div class="shr" id="s-meta-p"></div>
+  </div>
+  <div class="sp o">
+    <div class="ico"><svg width="24" height="24" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.2-.4-4.7H24v9h11.9c-.5 2.8-2.1 5.1-4.4 6.7v5.5h7.1c4.2-3.8 6.5-9.5 6.5-16.5z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.6-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.7 0-10.6-3.9-12.3-9.1H4.3v5.7C8 41.3 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.7 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.9l7.4-5.7z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8 6.7 4.3 14.1l7.4 5.7c1.7-5.2 6.6-9.1 12.3-9.1z"/></svg></div>
+    <h3>Google Ads</h3>
+    <div class="amt" id="s-goo"></div>
+    <div class="shr" id="s-goo-p"></div>
+  </div>
+</div>
+
+<!-- META -->
+<section class="sec">
+  <div class="in">
+    <div class="ph"><div class="ico"><svg width="30" height="18" viewBox="0 0 36 20" aria-hidden="true"><path d="M4 12c0-5 2.7-8 6-8 4 0 6 5 8 8s4 8 8 8c3.3 0 6-3 6-8s-2.7-8-6-8c-4 0-6 5-8 8s-4 8-8 8c-3.3 0-6-3-6-8z" fill="none" stroke="#0081FB" stroke-width="2.8" stroke-linecap="round"/></svg></div><div><h3>Meta</h3><p>Facebook · Instagram · Audience Network</p></div></div>
+    <div class="hl n">
+      <div><div class="v" id="m-form"></div><div class="l">Formularios de clientes potenciales</div></div>
+      <div><div class="v" id="m-cpf"></div><div class="l">Costo por formulario</div></div>
+    </div>
+    <div class="groups" id="m-groups"></div>
+  </div>
+</section>
+
+<!-- GOOGLE -->
+<section class="sec soft">
+  <div class="in">
+    <div class="ph"><div class="ico" style="background:#fff"><svg width="24" height="24" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.2-.4-4.7H24v9h11.9c-.5 2.8-2.1 5.1-4.4 6.7v5.5h7.1c4.2-3.8 6.5-9.5 6.5-16.5z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.6-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.7 0-10.6-3.9-12.3-9.1H4.3v5.7C8 41.3 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.7 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.9l7.4-5.7z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8 6.7 4.3 14.1l7.4 5.7c1.7-5.2 6.6-9.1 12.3-9.1z"/></svg></div><div><h3>Google Ads</h3><p>Red de Búsqueda</p></div></div>
+    <div class="hl o">
+      <div><div class="v" id="g-form"></div><div class="l">Formularios de clientes potenciales</div></div>
+      <div><div class="v" id="g-cpf"></div><div class="l">Costo por formulario</div></div>
+    </div>
+    <div class="groups" id="g-groups"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="in">
+    <span><b>Vista Acabados</b> · Reporte 1 jul — 30 set 2026</span>
+    <span>Fuentes: repositorio de leads del sitio web · Meta Ads · Google Ads</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var DATA = {
+    tot:{ per:"Todos · 1 de julio — 30 de setiembre 2026", nav:"Todos",
+      leads:{raw:98, dup:35, total:63, fuente:{"Meta":35,"Google Ads":19,"Directo / orgánico":9}, plat:{"Audience Network":24,"Facebook":8,"Instagram":3}},
+      meta:{gasto:803.14, impr:74645, alcance:35517, form:41, wa:4, clics:5049, visitas:2732},
+      google:{costo:778.99, impr:14851, clics:952, form:19, wa:1} },
+    jul:{ per:"1 — 31 de julio 2026", nav:"Julio 2026",
+      leads:{raw:27, dup:6, total:21, fuente:{"Meta":12,"Google Ads":5,"Directo / orgánico":4}, plat:{"Audience Network":8,"Facebook":3,"Instagram":1}},
+      meta:{gasto:271.70, impr:26895, alcance:12780, form:12, wa:2, clics:2139, visitas:1366},
+      google:{costo:278.22, impr:7338, clics:351, form:5, wa:0} },
+    ago:{ per:"1 — 31 de agosto 2026", nav:"Agosto 2026",
+      leads:{raw:33, dup:15, total:18, fuente:{"Meta":11,"Google Ads":6,"Directo / orgánico":1}, plat:{"Audience Network":6,"Facebook":4,"Instagram":1}},
+      meta:{gasto:234.84, impr:17329, alcance:8473, form:13, wa:2, clics:1113, visitas:493},
+      google:{costo:200.66, impr:3321, clics:222, form:7, wa:1} },
+    sep:{ per:"1 — 30 de setiembre 2026", nav:"Setiembre 2026",
+      leads:{raw:38, dup:14, total:24, fuente:{"Meta":12,"Google Ads":8,"Directo / orgánico":4}, plat:{"Audience Network":10,"Facebook":1,"Instagram":1}},
+      meta:{gasto:296.60, impr:30421, alcance:16560, form:16, wa:0, clics:1797, visitas:873},
+      google:{costo:300.12, impr:4192, clics:379, form:7, wa:0} }
+  };
+  var C_F={"Meta":"var(--navy-2)","Google Ads":"var(--orange)","Directo / orgánico":"#8D9399"};
+  var C_P={"Audience Network":"var(--navy-2)","Facebook":"var(--orange)","Instagram":"#8D9399"};
+
+  function nf(n,d){ if(n==null||!isFinite(n)) return "—"; return n.toLocaleString('es-CR',{minimumFractionDigits:d||0,maximumFractionDigits:d||0}); }
+  function money(n){ return (n==null||!isFinite(n)) ? "—" : "$"+nf(n,2); }
+  function pct(n){ return (n==null||!isFinite(n)) ? "—" : nf(n,2)+"%"; }
+  function div(a,b){ return b ? a/b : null; }
+  function $(id){ return document.getElementById(id); }
+  function set(id,v){ var e=$(id); if(e) e.textContent=v; }
+
+  function stack(stId,lgId,obj,colors){
+    var tot=0,k; for(k in obj) tot+=obj[k];
+    $(stId).innerHTML=Object.keys(obj).map(function(k){
+      return '<div style="flex-grow:'+obj[k]+';background:'+colors[k]+'"></div>'; }).join('');
+    $(lgId).innerHTML=Object.keys(obj).map(function(k){
+      var p= tot? Math.round(obj[k]/tot*100):0;
+      return '<div class="lg"><i style="background:'+colors[k]+'"></i><span class="n">'+k+'</span><span class="v">'+obj[k]+'</span><span class="p">'+p+'%</span></div>'; }).join('');
+  }
+
+  function groups(id, gs){
+    $(id).innerHTML=gs.map(function(g){
+      return '<div class="grp"><h4>'+g[0]+'</h4>'+g[1].map(function(r){
+        return '<div class="r"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>'; }).join('')+'</div>';
+    }).join('');
+  }
+
+  function render(p){
+    var d=DATA[p], m=d.meta, g=d.google, L=d.leads, inv=m.gasto+g.costo;
+    set('b-per', d.per);
+    set('h-raw', L.raw); set('h-leads', L.total);
+    var iv=money(inv).split(',');
+    $('h-inv').innerHTML=iv[0]+'<small>,'+iv[1]+' USD</small>';
+    set('h-dup', L.dup);
+    stack('st-fuente','lg-fuente',L.fuente,C_F);
+    stack('st-plat','lg-plat',L.plat,C_P);
+
+    $('p-inv').innerHTML=iv[0]+'<small>,'+iv[1]+' USD</small>';
+    $('bar-m').style.flexGrow=m.gasto; $('bar-g').style.flexGrow=g.costo;
+    set('s-meta', money(m.gasto)); set('s-meta-p', nf(m.gasto/inv*100,1)+"% de la inversión");
+    set('s-goo', money(g.costo)); set('s-goo-p', nf(g.costo/inv*100,1)+"% de la inversión");
+
+    set('m-form', nf(m.form)); set('m-cpf', m.form?money(m.gasto/m.form):"—");
+    groups('m-groups',[
+      ["Inversión y alcance",[["Inversión",money(m.gasto)],["Impresiones",nf(m.impr)],["Alcance",nf(m.alcance)],["Frecuencia",nf(div(m.impr,m.alcance),2)],["CPM",money(div(m.gasto,m.impr)*1000)]]],
+      ["Tráfico",[["Clics en el enlace",nf(m.clics)],["Visitas a la página de destino",nf(m.visitas)],["CTR",pct(div(m.clics,m.impr)*100)],["CPC",money(div(m.gasto,m.clics))]]],
+      ["Conversiones",[["Formularios en el sitio web",nf(m.form)],["Contactos en el sitio web",nf(m.wa)],["Costo por formulario",m.form?money(m.gasto/m.form):"—"]]]
+    ]);
+    set('g-form', nf(g.form)); set('g-cpf', g.form?money(g.costo/g.form):"—");
+    groups('g-groups',[
+      ["Inversión y alcance",[["Inversión",money(g.costo)],["Impresiones",nf(g.impr)],["CPM",money(div(g.costo,g.impr)*1000)]]],
+      ["Tráfico",[["Clics",nf(g.clics)],["CTR",pct(div(g.clics,g.impr)*100)],["CPC",money(div(g.costo,g.clics))]]],
+      ["Conversiones",[["Formularios en el sitio web",nf(g.form)],["Contactos en el sitio web",nf(g.wa)],["Costo por formulario",g.form?money(g.costo/g.form):"—"]]]
+    ]);
+  }
+
+  var btns=document.querySelectorAll('.pills button');
+  Array.prototype.forEach.call(btns,function(b){
+    b.addEventListener('click',function(){
+      Array.prototype.forEach.call(btns,function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true'); render(b.getAttribute('data-p'));
+    });
+  });
+  render('tot');
+  var nav=document.querySelector('.nav');
+  function onS(){ nav.classList.toggle('stuck', window.scrollY>8); }
+  window.addEventListener('scroll',onS,{passive:true}); onS();
+})();
+</script>
+</body>
+</html>
+
+</body></html>
